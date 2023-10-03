@@ -1,0 +1,26 @@
+/* Styles pour le formulaire */
+.groupe {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 10px;
+}
+
+/* Styles pour le résultat */
+.result {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #007acc;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Outil d'Autodiagnostic de la Souffrance au Travail</title>
+</head>
+<body>
+    <header>
+        <h1>Outil d'Autodiagnostic de la Souffrance au Travail</h1>
+    </header>
+    <form id="questionnaire">
+        <!-- Groupe 1 -->
+        <fieldset class="groupe">
+            <legend>Groupe 1 (Questions 1-6)</legend>
+            <div class="question">
+                <label for="q1">1. Je me sens fatigué(e) lorsque je me lève le matin...</label>
+                <select id="q1">
+                    <option value="0">Jamais</option>
+                    <option value="1">Quelques fois par an, au moins</option>
+                    <option value="2">Une fois par mois, au moins</option>
+                    <option value="3">Quelques fois par mois</option>
+                    <option value="4">Une fois par semaine</option>
+                    <option value="5">Quelques fois par semaine</option>
+                    <option value="6">Chaque jour</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q2">2. Je sens que je m'occupe de certains patients de façon impersonnelle...</label>
+                <select id="q2">
+                    <option value="0">Jamais</option>
+                    <option value="1">Quelques fois par an, au moins</option>
+                    <option value="2">Une fois par mois, au moins</option>
+                    <option value="3">Quelques fois par mois</option>
+                    <option value="4">Une fois par semaine</option>
+                    <option value="5">Quelques fois par semaine</option>
+                    <option value="6">Chaque jour</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q3">3. Je me sens plein(e) d'énergie...</label>
+                <select id="q3">
+                    <option value="0">Jamais</option>
+                    <option value="1">Quelques fois par an, au moins</option>
+                    <option value="2">Une fois par mois, au moins</option>
+                    <option value="3">Quelques fois par mois</option>
+                    <option value="4">Une fois par semaine</option>
+                    <option value="5">Quelques fois par semaine</option>
+                    <option value="6">Chaque jour</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q4">4. J'ai l'impression que mes patients me rendent responsable de certains de leurs problèmes...</label>
+                <select id="q4">
+                    <option value="0">Jamais</option>
+                    <option value="1">Quelques fois par an, au moins</option>
+                    <option value="2">Une fois par mois, au moins</option>
+                    <option value="3">Quelques fois par mois</option>
+                    <option value="4">Une fois par semaine</option>
+                    <option value="5">Quelques fois par semaine</option>
+                    <option value="6">Chaque jour</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q5">5. Je me sens à bout à la fin de ma journée de travail...</label>
+                <select id="q5">
+                    <option value="0">Jamais</option>
+                    <option value="1">Quelques fois par an, au moins</option>
+                    <option value="2">Une fois par mois, au moins</option>
+                    <option value="3">Quelques fois par mois</option>
+                    <option value="4">Une fois par semaine</option>
+                    <option value="5">Quelques fois par semaine</option>
+                    <option value="6">Chaque jour</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q6">6. Je m'occupe très efficacement des problèmes de mes patients...</label>
+                <select id="q6">
+                    <option value="0">Jamais</option>
+                    <option value="1">Quelques fois par an, au moins</option>
+                    <option value="2">Une fois par mois, au moins</option>
+                    <option value="3">Quelques fois par mois</option>
+                    <option value="4">Une fois par semaine</option>
+                    <option value="5">Quelques fois par semaine</option>
+                    <option value="6">Chaque jour</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Groupe 2 -->
+        <fieldset class="groupe">
+            <legend>Groupe 2 (Questions 7-8)</legend>
+            <div class="question">
+                <label for="q7">7. Avez-vous fait un bilan de santé (dépistage, examen de contrôle...) dans les 2 dernières années ?</label>
+                <select id="q7">
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q8">8. Avez-vous un symptôme somatique qui aurait dû vous amener à consulter depuis quelque temps ?</label>
+                <select id="q8">
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Groupe 3 -->
+        <fieldset class="groupe">
+            <legend>Groupe 3 (Questions 9-10)</legend>
+            <div class="question">
+                <label for="q9">9. Avez-vous cette semaine (8 derniers jours) eu une activité sportive ou culturelle ?</label>
+                <select id="q9">
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q10">10. Avez-vous cette semaine (8 derniers jours) déjeuné ou diné en famille ou entre amis ?</label>
+                <select id="q10">
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Bouton de soumission -->
+        <button type="button" id="submitBtn">Soumettre le questionnaire</button>
+    </form>
+
+    <!-- Résultat -->
+    <div id="result" class="result"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
