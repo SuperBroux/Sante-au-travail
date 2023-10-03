@@ -103,7 +103,7 @@ if (sg3 <= 6) {
         }
 
         // Affichage du résultat
-        result.innerHTML = `<p>Groupe 1 : ${resultatG1}</p><p>Groupe 2 : ${resultatG2}</p><p>Groupe 3 : ${resultatG3}</p>`;
+        result.innerHTML = `<p>Épuisement professionnel : ${resultatG1}</p><p>Santé personnelle: ${resultatG2}</p><p>Vie sociale, sportive et culturelle : ${resultatG3}</p>`;
         result.style.display = "block";
     });
 });
