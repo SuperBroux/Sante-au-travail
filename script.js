@@ -56,25 +56,49 @@ if (sg3 <= 6) {
     risqueSg3 = "vert";
 }
         // Calcul du résultat pour le Groupe 1
-        let resultatG1 = "";
+let resultatG1 = "";
 
-        if (risqueSg1 === "rouge" && risqueSg2 === "rouge" && risqueSg3 === "rouge") {
-            resultatG1 = "Nous vous invitons à prendre contact avec notre aide médecin de médecins au 01.45.45.45.45";
-        } else if ((risqueSg1 === "rouge" && risqueSg2 === "orange" && risqueSg3 === "orange") ||
-            (risqueSg1 === "orange" && risqueSg2 === "rouge" && risqueSg3 === "orange") ||
-            (risqueSg1 === "orange" && risqueSg2 === "orange" && risqueSg3 === "rouge")) {
-            resultatG1 = "Nous vous invitons à prendre contact avec notre aide médecin de médecins au 01.45.45.45.45";
-        } else if ((risqueSg1 === "rouge" && risqueSg2 === "orange" && risqueSg3 === "vert") ||
-            (risqueSg1 === "rouge" && risqueSg2 === "vert" && risqueSg3 === "orange") ||
-            (risqueSg1 === "vert" && risqueSg2 === "rouge" && risqueSg3 === "orange")) {
-            resultatG1 = "Nous vous invitons à prendre contact avec notre aide médecin de médecins au 01.45.45.45.45";
-        } else if ((risqueSg1 === "rouge" && risqueSg2 === "vert" && risqueSg3 === "vert") ||
-            (risqueSg1 === "vert" && risqueSg2 === "rouge" && risqueSg3 === "vert") ||
-            (risqueSg1 === "vert" && risqueSg2 === "vert" && risqueSg3 === "rouge")) {
-            resultatG1 = "Nous vous invitons à prendre le temps de faire un test plus complet";
-        } else {
-            resultatG1 = "Tout va bien, nous vous invitons à continuer à prendre soin de vous, si vous le jugez utile faites un test plus complet";
-        }
+if (
+    (risqueSg1 === "rouge" && risqueSg2 === "rouge" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "rouge" && risqueSg2 === "rouge" && risqueSg3 === "orange") ||
+    (risqueSg1 === "rouge" && risqueSg2 === "rouge" && risqueSg3 === "vert") ||
+    (risqueSg1 === "rouge" && risqueSg2 === "orange" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "rouge" && risqueSg2 === "vert" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "orange" && risqueSg2 === "rouge" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "vert" && risqueSg2 === "rouge" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "rouge" && risqueSg2 === "orange" && risqueSg3 === "orange") ||
+    (risqueSg1 === "orange" && risqueSg2 === "orange" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "orange" && risqueSg2 === "rouge" && risqueSg3 === "orange") ||
+    (risqueSg1 === "orange" && risqueSg2 === "orange" && risqueSg3 === "orange")
+) {
+    resultatG1 = "Nous vous invitons à prendre contact avec notre aide médecin de médecins au 01.45.45.45.45";
+} else if (
+    (risqueSg1 === "vert" && risqueSg2 === "vert" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "vert" && risqueSg2 === "rouge" && risqueSg3 === "vert") ||
+    (risqueSg1 === "rouge" && risqueSg2 === "vert" && risqueSg3 === "vert") ||
+    (risqueSg1 === "orange" && risqueSg2 === "orange" && risqueSg3 === "vert") ||
+    (risqueSg1 === "orange" && risqueSg2 === "vert" && risqueSg3 === "orange") ||
+    (risqueSg1 === "vert" && risqueSg2 === "orange" && risqueSg3 === "orange") ||
+    (risqueSg1 === "vert" && risqueSg2 === "orange" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "vert" && risqueSg2 === "rouge" && risqueSg3 === "orange") ||
+    (risqueSg1 === "orange" && risqueSg2 === "rouge" && risqueSg3 === "vert") ||
+    (risqueSg1 === "orange" && risqueSg2 === "vert" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "rouge" && risqueSg2 === "vert" && risqueSg3 === "orange") ||
+    (risqueSg1 === "rouge" && risqueSg2 === "orange" && risqueSg3 === "vert")
+) {
+    resultatG1 = "Nous vous invitons à prendre le temps de faire un test plus complet";
+} else if (
+    (risqueSg1 === "rouge" && risqueSg2 === "vert" && risqueSg3 === "orange") ||
+    (risqueSg1 === "rouge" && risqueSg2 === "orange" && risqueSg3 === "vert") ||
+    (risqueSg1 === "orange" && risqueSg2 === "rouge" && risqueSg3 === "vert") ||
+    (risqueSg1 === "orange" && risqueSg2 === "vert" && risqueSg3 === "rouge") ||
+    (risqueSg1 === "vert" && risqueSg2 === "rouge" && risqueSg3 === "orange") ||
+    (risqueSg1 === "vert" && risqueSg2 === "orange" && risqueSg3 === "rouge")
+) {
+    resultatG1 = "Nous vous invitons à continuer à prendre soin de vous, vous le jugez utile faites un test plus complet ";
+} else {
+    resultatG1 = "Tout va bien, nous vous invitons à continuer à prendre soin de vous, si vous le jugez utile faites un test plus complet";
+}
 
         // Calcul du résultat pour le Groupe 2
         let resultatG2 = "";
