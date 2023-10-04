@@ -130,4 +130,11 @@ if (
         result.innerHTML = `<p>Épuisement professionnel : ${resultatG1}</p><p>Santé personnelle: ${resultatG2}</p><p>Vie sociale, sportive et culturelle : ${resultatG3}</p>`;
         result.style.display = "block";
     });
+        // Gestionnaire d'événements pour le bouton de réinitialisation
+    const resetBtn = document.getElementById("resetBtn");
+    resetBtn.addEventListener("click", function () {
+        // Rechargez simplement la page pour réinitialiser le questionnaire
+        location.reload();
+    });
+
 });
