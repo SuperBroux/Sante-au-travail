@@ -18,9 +18,14 @@
 
 /* Styles pour l'en-tête */
 header {
-    background-color: #007acc;
+    background-color: #99e5f7;
     color: white;
     padding: 10px;
     text-align: center;
     font-size: 24px;
+}
+header img {
+    width: 200px; /* Largeur souhaitée en pixels */
+    height: auto; /* Hauteur automatique pour maintenir le rapport hauteur/largeur */
+    margin-right: 20px; /* Marge à droite du logo pour l'espacement */
 }
