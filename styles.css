@@ -25,7 +25,7 @@ header {
     font-size: 24px;
 }
 header img {
-    width: 200px; /* Largeur souhaitée en pixels */
+    width: 20px; /* Largeur souhaitée en pixels */
     height: auto; /* Hauteur automatique pour maintenir le rapport hauteur/largeur */
     margin-right: 20px; /* Marge à droite du logo pour l'espacement */
 }
