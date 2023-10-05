@@ -88,14 +88,11 @@ if (
 ) {
     resultatG1 = "Nous vous invitons à prendre le temps de faire un test plus complet";
 } else if (
-    (risqueSg1 === "rouge" && risqueSg2 === "vert" && risqueSg3 === "orange") ||
-    (risqueSg1 === "rouge" && risqueSg2 === "orange" && risqueSg3 === "vert") ||
-    (risqueSg1 === "orange" && risqueSg2 === "rouge" && risqueSg3 === "vert") ||
-    (risqueSg1 === "orange" && risqueSg2 === "vert" && risqueSg3 === "rouge") ||
-    (risqueSg1 === "vert" && risqueSg2 === "rouge" && risqueSg3 === "orange") ||
-    (risqueSg1 === "vert" && risqueSg2 === "orange" && risqueSg3 === "rouge")
+    (risqueSg1 === "orange" && risqueSg2 === "vert" && risqueSg3 === "vert") ||
+    (risqueSg1 === "vert" && risqueSg2 === "orange" && risqueSg3 === "vert") ||
+    (risqueSg1 === "vert" && risqueSg2 === "vert" && risqueSg3 === "orange") 
 ) {
-    resultatG1 = "Nous vous invitons à continuer à prendre soin de vous, vous le jugez utile faites un test plus complet ";
+    resultatG1 = "Nous vous invitons à continuer à prendre soin de vous. Si vous le jugez utile faites un test plus complet ";
 } else {
     resultatG1 = "Tout va bien, nous vous invitons à continuer à prendre soin de vous, si vous le jugez utile faites un test plus complet";
 }
