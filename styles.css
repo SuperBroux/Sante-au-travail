@@ -27,3 +27,8 @@ header {
 header h1 {
     font-size: 36px; /* Remplacez cette valeur par la taille de police souhaitée en pixels */
 }
+header img {
+    width: 200px; /* Largeur souhaitée en pixels */
+    height: auto; /* Hauteur automatique pour maintenir le rapport hauteur/largeur */
+    margin-right: 20px; /* Marge à droite du logo pour l'espacement */
+}
