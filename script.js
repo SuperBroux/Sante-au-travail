@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     submitBtn.addEventListener("click", function () {
         // Groupe 1
-        const q1 = parseInt(document.getElementById("q1").value);
-        const q2 = parseInt(document.getElementById("q2").value);
-        const q3 = parseInt(document.getElementById("q3").value);
-        const q4 = parseInt(document.getElementById("q4").value);
-        const q5 = parseInt(document.getElementById("q5").value);
-        const q6 = parseInt(document.getElementById("q6").value);
+        const q1 = parseInt(document.querySelector('input[name="q1"]:checked').value);
+        const q2 = parseInt(document.querySelector('input[name="q2"]:checked').value);
+        const q3 = parseInt(document.querySelector('input[name="q3"]:checked').value);
+        const q4 = parseInt(document.querySelector('input[name="q4"]:checked').value);
+        const q5 = parseInt(document.querySelector('input[name="q5"]:checked').value);
+        const q6 = parseInt(document.querySelector('input[name="q6"]:checked').value);
 
         // Groupe 2
         const q7 = document.getElementById("q7").value;
@@ -27,34 +27,35 @@ document.addEventListener("DOMContentLoaded", function () {
         const sg3 = q3 + q6; // Sous-groupe 3
 
         // Calcul du niveau de risque pour chaque sous-groupe
-let risqueSg1, risqueSg2, risqueSg3;
+        let risqueSg1, risqueSg2, risqueSg3;
 
-// Sous-groupe 1 (SG1)
-if (sg1 <= 3) {
-    risqueSg1 = "vert";
-} else if (sg1 >= 4 && sg1 <= 5) {
-    risqueSg1 = "orange";
-} else {
-    risqueSg1 = "rouge";
-}
+        // Sous-groupe 1 (SG1)
+        if (sg1 <= 3) {
+            risqueSg1 = "vert";
+        } else if (sg1 >= 4 && sg1 <= 5) {
+            risqueSg1 = "orange";
+        } else {
+            risqueSg1 = "rouge";
+        }
 
-// Sous-groupe 2 (SG2)
-if (sg2 <= 2) {
-    risqueSg2 = "vert";
-} else if (sg2 >= 3 && sg2 <= 4) {
-    risqueSg2 = "orange";
-} else {
-    risqueSg2 = "rouge";
-}
+        // Sous-groupe 2 (SG2)
+        if (sg2 <= 2) {
+            risqueSg2 = "vert";
+        } else if (sg2 >= 3 && sg2 <= 4) {
+            risqueSg2 = "orange";
+        } else {
+            risqueSg2 = "rouge";
+        }
 
-// Sous-groupe 3 (SG3)
-if (sg3 <= 6) {
-    risqueSg3 = "rouge";
-} else if (sg3 >= 7 && sg3 <= 9) {
-    risqueSg3 = "orange";
-} else {
-    risqueSg3 = "vert";
-}
+        // Sous-groupe 3 (SG3)
+        if (sg3 <= 6) {
+            risqueSg3 = "rouge";
+        } else if (sg3 >= 7 && sg3 <= 9) {
+            risqueSg3 = "orange";
+        } else {
+            risqueSg3 = "vert";
+        }
+
         // Calcul du résultat pour le Groupe 1
 let resultatG1 = "";
 
@@ -97,6 +98,7 @@ if (
     resultatG1 = "Tout va bien, nous vous invitons à continuer à prendre soin de vous, si vous le jugez utile faites un test plus complet";
 }
 
+
         // Calcul du résultat pour le Groupe 2
         let resultatG2 = "";
 
@@ -127,11 +129,15 @@ if (
         result.innerHTML = `<p>Épuisement professionnel : ${resultatG1}</p><p>Santé personnelle: ${resultatG2}</p><p>Vie sociale, sportive et culturelle : ${resultatG3}</p>`;
         result.style.display = "block";
     });
-        // Gestionnaire d'événements pour le bouton de réinitialisation
+
+    // Ajoutez les lignes suivantes pour le bouton de réinitialisation
+
+    // Gestionnaire d'événements pour le bouton de réinitialisation
     const resetBtn = document.getElementById("resetBtn");
     resetBtn.addEventListener("click", function () {
         // Rechargez simplement la page pour réinitialiser le questionnaire
         location.reload();
     });
 
+    // Fin des lignes ajoutées pour le bouton de réinitialisation
 });
